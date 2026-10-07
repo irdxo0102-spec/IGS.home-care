@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IGS Home Care | Professional Home Service</title>
+
+<meta name="description"
+content="IGS Home Care - Electrical, Sanitary, Gas, CCTV Installation এবং Repair & Maintenance Service.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --blue:#071a38;
+    --blue2:#0c2d5c;
+    --orange:#ff8a00;
+    --orange2:#ffb000;
+    --white:#ffffff;
+    --light:#f5f7fb;
+    --text:#182235;
+    --muted:#657085;
+    --border:#e4e8ef;
+}
+
+body{
+    font-family:'Noto Sans Bengali',Arial,sans-serif;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.7;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(7,26,56,.97);
+    backdrop-filter:blur(12px);
+    box-shadow:0 3px 20px rgba(0,0,0,.18);
+}
+
+.nav{
+    max-width:1150px;
+    margin:auto;
+    padding:8px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+    font-size:20px;
+    font-weight:800;
+    text-decoration:none;
+    white-space:nowrap;
+}
+
+.logo img{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+    display:block;
+}
+
+.logo-text{
+    color:white;
+}
+
+.logo-text span{
+    color:var(--orange);
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    list-style:none;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--orange2);
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:27px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 80% 25%,
+        rgba(255,138,0,.20),
+        transparent 28%
+    ),
+    linear-gradient(
+        135deg,
+        #06152e,
+        #0c2d5c 60%,
+        #071a38
+    );
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:50%;
+    right:-180px;
+    top:-180px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:50%;
+    right:-160px;
+    bottom:-180px;
+}
+
+.hero-inner{
+    width:100%;
+    max-width:1150px;
+    margin:auto;
+    padding:80px 20px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:45px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 14px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:30px;
+    color:#ffd18a;
+    font-size:13px;
+    margin-bottom:18px;
+    background:rgba(255,255,255,.05);
+}
+
+.hero h1{
+    color:white;
+    font-size:clamp(40px,6vw,70px);
+    line-height:1.08;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:var(--orange);
+}
+
+.hero p{
+    color:#d8e0ee;
+    font-size:17px;
+    max-width:600px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:13px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:linear-gradient(
+        135deg,
+        var(--orange),
+        var(--orange2)
+    );
+    color:#101010;
+    box-shadow:0 8px 25px rgba(255,138,0,.25);
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    color:white;
+    border:1px solid rgba(255,255,255,.28);
+}
+
+.btn-outline:hover{
+    background:white;
+    color:var(--blue);
+}
+
+
+/* =========================
+   HERO LOGO CARD
+========================= */
+
+.hero-card{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.13);
+    border-radius:28px;
+    padding:35px 25px;
+    color:white;
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+    backdrop-filter:blur(8px);
+}
+
+.hero-logo{
+    width:190px;
+    height:190px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero-logo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+    filter:drop-shadow(0 15px 25px rgba(0,0,0,.35));
+}
+
+.hero-card h3{
+    text-align:center;
+    font-size:25px;
+    letter-spacing:.5px;
+}
+
+.hero-card p{
+    text-align:center;
+    font-size:14px;
+    margin:5px auto 20px;
+}
+
+.service-mini{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.service-mini div{
+    background:rgba(255,255,255,.08);
+    padding:11px;
+    border-radius:10px;
+    text-align:center;
+    font-size:13px;
+    border:1px solid rgba(255,255,255,.06);
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+section{
+    padding:85px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-head{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 45px;
+}
+
+.section-head .small{
+    color:var(--orange);
+    font-weight:800;
+    font-size:14px;
+}
+
+.section-head h2{
+    font-size:36px;
+    margin:5px 0 10px;
+    color:var(--blue);
+}
+
+.section-head p{
+    color:var(--muted);
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:white;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+
+.service-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:25px 18px;
+    text-align:center;
+    transition:.3s;
+    box-shadow:0 8px 25px rgba(9,30,66,.05);
+}
+
+.service-card:hover{
+    transform:translateY(-7px);
+    border-color:#ffc16d;
+    box-shadow:0 18px 35px rgba(9,30,66,.1);
+}
+
+.icon{
+    width:68px;
+    height:68px;
+    margin:0 auto 17px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:31px;
+    background:#fff3df;
+}
+
+.service-card h3{
+    font-size:18px;
+    color:var(--blue);
+    margin-bottom:7px;
+}
+
+.service-card p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+
+/* =========================
+   COMPLETED WORKS / PROGRESS
+========================= */
+
+.completed-works{
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(255,138,0,.08),
+            transparent 25%
+        ),
+        linear-gradient(135deg,#f8fbff,#eef6ff);
+}
+
+.works-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+
+.work-card{
+    position:relative;
+    overflow:hidden;
+    background:#ffffff;
+    border-radius:22px;
+    padding:28px 16px;
+    text-align:center;
+    border:1px solid rgba(228,232,239,.9);
+    border-top:5px solid transparent;
+    box-shadow:0 10px 30px rgba(9,30,66,.08);
+    transition:.3s ease;
+}
+
+.work-card::after{
+    content:"";
+    position:absolute;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    right:-45px;
+    top:-45px;
+    opacity:.08;
+}
+
+.work-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(9,30,66,.15);
+}
+
+.work-icon{
+    width:68px;
+    height:68px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:31px;
+}
+
+.work-number{
+    font-size:44px;
+    font-weight:800;
+    line-height:1;
+    margin-bottom:9px;
+}
+
+.work-card h3{
+    color:var(--blue);
+    font-size:17px;
+    line-height:1.5;
+    margin-bottom:7px;
+}
+
+.work-card p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.65;
+}
+
+
+/* Individual colors */
+
+.card-paint{
+    border-top-color:#ff5c5c;
+}
+
+.card-paint .work-icon{
+    background:#ffe3e3;
+}
+
+.card-paint .work-number{
+    color:#e03131;
+}
+
+.card-paint::after{
+    background:#ff5c5c;
+}
+
+
+.card-furniture{
+    border-top-color:#f59f00;
+}
+
+.card-furniture .work-icon{
+    background:#fff3bf;
+}
+
+.card-furniture .work-number{
+    color:#e67700;
+}
+
+.card-furniture::after{
+    background:#f59f00;
+}
+
+
+.card-camera{
+    border-top-color:#7950f2;
+}
+
+.card-camera .work-icon{
+    background:#eee5ff;
+}
+
+.card-camera .work-number{
+    color:#6741d9;
+}
+
+.card-camera::after{
+    background:#7950f2;
+}
+
+
+.card-light{
+    border-top-color:#fcc419;
+}
+
+.card-light .work-icon{
+    background:#fff9db;
+}
+
+.card-light .work-number{
+    color:#f08c00;
+}
+
+.card-light::after{
+    background:#fcc419;
+}
+
+
+.card-water{
+    border-top-color:#228be6;
+}
+
+.card-water .work-icon{
+    background:#dbeafe;
+}
+
+.card-water .work-number{
+    color:#1971c2;
+}
+
+.card-water::after{
+    background:#228be6;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:var(--light);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-box{
+    background:var(--blue);
+    color:white;
+    border-radius:25px;
+    padding:40px;
+    position:relative;
+    overflow:hidden;
+}
+
+.about-box::before{
+    content:"IGS";
+    position:absolute;
+    right:-20px;
+    bottom:-65px;
+    font-size:160px;
+    font-weight:900;
+    color:rgba(255,255,255,.04);
+}
+
+.about-box h3{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.about-box p{
+    color:#d7e0ed;
+}
+
+.checks{
+    display:grid;
+    gap:14px;
+    margin-top:25px;
+}
+
+.check{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.check b{
+    color:var(--orange);
+}
+
+
+/* =========================
+   WHY
+========================= */
+
+.why{
+    background:white;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.why-card{
+    padding:28px;
+    border:1px solid var(--border);
+    border-radius:18px;
+}
+
+.why-card strong{
+    display:block;
+    font-size:20px;
+    margin-bottom:7px;
+    color:var(--blue);
+}
+
+.why-card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:
+    linear-gradient(
+        135deg,
+        #06152e,
+        #0c2d5c
+    );
+    color:white;
+}
+
+.contact .section-head h2{
+    color:white;
+}
+
+.contact .section-head p{
+    color:#ccd7e7;
+}
+
+.contact-box{
+    max-width:850px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.contact-item{
+    padding:25px;
+    border:1px solid rgba(255,255,255,.13);
+    border-radius:17px;
+    background:rgba(255,255,255,.06);
+}
+
+.contact-item span{
+    display:block;
+    color:#aebbd0;
+    font-size:13px;
+}
+
+.contact-item strong{
+    display:block;
+    font-size:20px;
+    margin-top:5px;
+}
+
+.contact-buttons{
+    margin-top:28px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#040e1f;
+    color:#91a0b7;
+    text-align:center;
+    padding:25px 15px;
+    font-size:13px;
+}
+
+footer strong{
+    color:white;
+}
+
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#20c76a;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    z-index:999;
+    transition:.25s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1000px){
+
+    .works-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:900px){
+
+    .nav{
+        padding:6px 15px;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .logo img{
+        width:52px;
+        height:52px;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:64px;
+        left:0;
+        right:0;
+        background:#071a38;
+        display:none;
+        flex-direction:column;
+        padding:20px;
+        gap:14px;
+        border-top:1px solid rgba(255,255,255,.1);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .works-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
+    }
+
+    .work-card{
+        padding:22px 10px;
+        border-radius:18px;
+    }
+
+    .work-number{
+        font-size:35px;
+    }
+
+    .work-card h3{
+        font-size:15px;
+    }
+
+    .work-card p{
+        font-size:11px;
+    }
+
+}
+
+@media(max-width:520px){
+
+    section{
+        padding:65px 15px;
+    }
+
+    .hero{
+        min-height:auto;
+    }
+
+    .hero-inner{
+        padding:60px 15px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-card{
+        padding:25px 15px;
+    }
+
+    .hero-logo{
+        width:150px;
+        height:150px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box{
+        grid-template-columns:1fr;
+    }
+
+    .section-head h2{
+        font-size:29px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .logo img{
+        width:46px;
+        height:46px;
+    }
+
+    .logo{
+        font-size:16px;
+        gap:7px;
+    }
+
+}
+
+@media(max-width:400px){
+
+    .works-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:360px){
+
+    .logo-text{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero-logo{
+        width:135px;
+        height:135px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+<nav class="nav">
+
+<a href="#home" class="logo">
+
+    <img
+        src="assets/igs-logo.png"
+        alt="IGS Home Care Logo">
+
+    <span class="logo-text">
+        IGS <span>HOME CARE</span>
+    </span>
+
+</a>
+
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+
+<ul class="nav-links" id="navLinks">
+
+<li>
+<a href="#home">হোম</a>
+</li>
+
+<li>
+<a href="#services">সেবাসমূহ</a>
+</li>
+
+<li>
+<a href="#completed">আমাদের কাজ</a>
+</li>
+
+<li>
+<a href="#about">আমাদের সম্পর্কে</a>
+</li>
+
+<li>
+<a href="#why">কেন IGS?</a>
+</li>
+
+<li>
+<a href="#contact">যোগাযোগ</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-inner">
+
+
+<div>
+
+<div class="badge">
+বিশ্বস্ত • দ্রুত • মানসম্মত সেবা
+</div>
+
+
+<h1>
+
+আপনার সমস্যা,<br>
+
+<span>আমাদের সমাধান।</span>
+
+</h1>
+
+
+<p>
+
+বাড়ি ও প্রয়োজনীয় স্থাপনার
+Electrical, Sanitary, Gas,
+CCTV Installation এবং
+Repair & Maintenance সেবা।
+
+</p>
+
+
+<div class="buttons">
+
+<a
+class="btn btn-primary"
+href="tel:01919426929">
+
+📞 এখনই কল করুন
+
+</a>
+
+
+<a
+class="btn btn-outline"
+href="https://wa.me/8801919426929"
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- HERO LOGO -->
+
+<div class="hero-card">
+
+
+<div class="hero-logo">
+
+<img
+src="assets/igs-logo.png"
+alt="IGS Home Care Logo">
+
+</div>
+
+
+<h3>
+IGS HOME CARE
+</h3>
+
+
+<p>
+Professional Home Service
+</p>
+
+
+<div class="service-mini">
+
+<div>⚡ Electrical</div>
+
+<div>🚰 Sanitary</div>
+
+<div>🔥 Gas</div>
+
+<div>📹 CCTV</div>
+
+<div>🛠️ Repair</div>
+
+<div>✓ Maintenance</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section
+class="services"
+id="services">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div class="small">
+OUR SERVICES
+</div>
+
+<h2>
+আমাদের সেবাসমূহ
+</h2>
+
+<p>
+প্রয়োজন অনুযায়ী নির্ভরযোগ্য ও মানসম্মত হোম সার্ভিস।
+</p>
+
+</div>
+
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+
+<div class="icon">
+⚡
+</div>
+
+<h3>
+Electrical
+</h3>
+
+<p>
+ওয়্যারিং, লাইট, সুইচ, সকেট,
+ফ্যান, সুইচ বোর্ড ও প্রয়োজনীয়
+ইলেকট্রিক্যাল কাজ।
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="icon">
+🚰
+</div>
+
+<h3>
+Sanitary
+</h3>
+
+<p>
+কল, ট্যাপ, বেসিন, শাওয়ার এবং
+প্রয়োজনীয় স্যানিটারি ফিটিংসের কাজ।
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="icon">
+🔥
+</div>
+
+<h3>
+Gas Service
+</h3>
+
+<p>
+গ্যাস চুলা, লিক চেক, পাইপ পরিবর্তন,
+রেগুলেটর ও প্রয়োজনীয় সার্ভিস।
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="icon">
+📹
+</div>
+
+<h3>
+CCTV Installation
+</h3>
+
+<p>
+CCTV ক্যামেরা, DVR/NVR সেটআপ,
+ইনস্টলেশন ও কনফিগারেশন।
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="icon">
+🛠️
+</div>
+
+<h3>
+Repair & Maintenance
+</h3>
+
+<p>
+বাড়ির বিভিন্ন প্রয়োজনীয় ছোটখাটো
+মেরামত ও নিয়মিত রক্ষণাবেক্ষণ।
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     COMPLETED WORKS
+========================= -->
+
+<section
+class="completed-works"
+id="completed">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div class="small">
+OUR PROGRESS
+</div>
+
+<h2>
+এখন পর্যন্ত সম্পন্ন কাজ
+</h2>
+
+<p>
+আমাদের সম্পন্ন করা কাজের বর্তমান পরিসংখ্যান।
+</p>
+
+</div>
+
+
+
+<div class="works-grid">
+
+
+<div class="work-card card-paint">
+
+<div class="work-icon">
+🎨
+</div>
+
+<div class="work-number">
+78
+</div>
+
+<h3>
+ঘর রং করা
+</h3>
+
+<p>
+টি ঘরের রং করার কাজ সম্পন্ন হয়েছে।
+</p>
+
+</div>
+
+
+
+<div class="work-card card-furniture">
+
+<div class="work-icon">
+🪑
+</div>
+
+<div class="work-number">
+46
+</div>
+
+<h3>
+কাঠের ফার্নিচার বার্নিশ
+</h3>
+
+<p>
+টি কাঠের ফার্নিচার বার্নিশ করা হয়েছে।
+</p>
+
+</div>
+
+
+
+<div class="work-card card-camera">
+
+<div class="work-icon">
+📹
+</div>
+
+<div class="work-number">
+11
+</div>
+
+<h3>
+ক্যামেরা ইনস্টলেশন
+</h3>
+
+<p>
+টি ক্যামেরা সফলভাবে ইনস্টল করা হয়েছে।
+</p>
+
+</div>
+
+
+
+<div class="work-card card-light">
+
+<div class="work-icon">
+💡
+</div>
+
+<div class="work-number">
+63
+</div>
+
+<h3>
+গ্যাসলাইট
+</h3>
+
+<p>
+টি গ্যাসলাইটের কাজ সম্পন্ন হয়েছে।
+</p>
+
+</div>
+
+
+
+<div class="work-card card-water">
+
+<div class="work-icon">
+🚰
+</div>
+
+<div class="work-number">
+88
+</div>
+
+<h3>
+পানির লাইন
+</h3>
+
+<p>
+টি পানির লাইন ঠিক করা হয়েছে।
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+class="about"
+id="about">
+
+<div class="container">
+
+
+<div class="about-grid">
+
+
+<div class="about-box">
+
+<h3>
+IGS Home Care
+</h3>
+
+<p>
+
+আমাদের লক্ষ্য হলো প্রয়োজনের সময়ে
+সহজভাবে ভালো মানের সার্ভিস দেওয়া।
+
+অপ্রয়োজনীয় বড় প্রতিশ্রুতি নয়—
+প্রয়োজন অনুযায়ী কাজ ও পরিষ্কার যোগাযোগ।
+
+</p>
+
+</div>
+
+
+
+<div>
+
+
+<div
+class="section-head"
+style="text-align:left;margin:0 0 20px">
+
+<div class="small">
+WHY US
+</div>
+
+<h2>
+কাজের ক্ষেত্রে আমাদের অগ্রাধিকার
+</h2>
+
+</div>
+
+
+
+<div class="checks">
+
+
+<div class="check">
+
+<b>✓</b>
+
+<span>
+কাজের আগে প্রয়োজনীয় বিষয়
+পরিষ্কারভাবে জানানো
+</span>
+
+</div>
+
+
+<div class="check">
+
+<b>✓</b>
+
+<span>
+পরিষ্কার ও দায়িত্বশীল সার্ভিস
+</span>
+
+</div>
+
+
+<div class="check">
+
+<b>✓</b>
+
+<span>
+গ্রাহকের প্রয়োজন অনুযায়ী কাজ
+</span>
+
+</div>
+
+
+<div class="check">
+
+<b>✓</b>
+
+<span>
+যোগাযোগের সহজ ব্যবস্থা
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY
+========================= -->
+
+<section
+class="why"
+id="why">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div class="small">
+IGS HOME CARE
+</div>
+
+<h2>
+কেন আমাদের সাথে যোগাযোগ করবেন?
+</h2>
+
+<p>
+সহজ সার্ভিস, পরিষ্কার যোগাযোগ এবং প্রয়োজন অনুযায়ী সমাধান।
+</p>
+
+</div>
+
+
+
+<div class="why-grid">
+
+
+<div class="why-card">
+
+<strong>
+01 — দ্রুত যোগাযোগ
+</strong>
+
+<p>
+প্রয়োজন হলে সরাসরি কল বা
+WhatsApp-এর মাধ্যমে যোগাযোগ
+করতে পারবেন।
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<strong>
+02 — প্রয়োজনভিত্তিক কাজ
+</strong>
+
+<p>
+যে কাজ প্রয়োজন নেই,
+সেটাকে অযথা বড় করে দেখানো নয়।
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<strong>
+03 — দায়িত্বশীল সার্ভিস
+</strong>
+
+<p>
+প্রতিটি কাজ যতটা সম্ভব সুন্দর
+ও পরিষ্কারভাবে সম্পন্ন করার চেষ্টা।
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+class="contact"
+id="contact">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div class="small">
+CONTACT
+</div>
+
+<h2>
+সার্ভিসের জন্য যোগাযোগ করুন
+</h2>
+
+<p>
+আপনার প্রয়োজনের কথা জানাতে সরাসরি
+কল অথবা WhatsApp করুন।
+</p>
+
+</div>
+
+
+
+<div class="contact-box">
+
+
+<div class="contact-item">
+
+<span>
+📞 ফোন
+</span>
+
+<strong>
+01919426929
+</strong>
+
+</div>
+
+
+
+<div class="contact-item">
+
+<span>
+💬 WhatsApp
+</span>
+
+<strong>
+01919426929
+</strong>
+
+</div>
+
+
+</div>
+
+
+
+<div class="contact-buttons">
+
+
+<a
+class="btn btn-primary"
+href="tel:01919426929">
+
+📞 কল করুন
+
+</a>
+
+
+
+<a
+class="btn btn-outline"
+href="https://wa.me/8801919426929"
+target="_blank">
+
+💬 WhatsApp করুন
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<strong>
+IGS HOME CARE
+</strong>
+
+<br>
+
+Electrical • Sanitary • Gas • CCTV • Repair & Maintenance
+
+<br><br>
+
+© <span id="year"></span>
+IGS Home Care. All Rights Reserved.
+
+</footer>
+
+
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/8801919426929"
+target="_blank"
+aria-label="WhatsApp">
+
+💬
+
+</a>
+
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
+
+document
+.getElementById("year")
+.textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
